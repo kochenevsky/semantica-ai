@@ -18,11 +18,10 @@ This is a **remote HTTP/SSE server** — no installation required. Just add the 
 ```json
 {
   "mcpServers": {
-    "semantica-ai": {
-      "url": "https://ai-semantica.com/mcp",
-      "transport": "sse",
+    "semantica": {
+      "url": "https://mcp.ai-semantica.com/mcp",
       "headers": {
-        "Authorization": "Bearer YOUR_API_KEY"
+        "Authorization": "Bearer sem_your_api_key"
       }
     }
   }
@@ -118,9 +117,8 @@ You can register a new Semantica AI account and set up your first project entire
 ```json
 {
   "mcpServers": {
-    "semantica-ai": {
-      "url": "https://ai-semantica.com/mcp",
-      "transport": "sse"
+    "semantica": {
+      "url": "https://mcp.ai-semantica.com/mcp"
     }
   }
 }

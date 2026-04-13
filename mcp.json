@@ -7,7 +7,7 @@
   "documentationUrl": "https://ai-semantica.com/ru/mcp",
   "transport": {
     "type": "sse",
-    "url": "https://ai-semantica.com/mcp"
+    "url": "https://mcp.ai-semantica.com/mcp"
   },
   "authentication": {
     "type": "bearer",
