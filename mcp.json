@@ -1,0 +1,205 @@
+{
+  "name": "semantica-ai",
+  "displayName": "Semantica AI — AI Visibility Analytics",
+  "description": "Track and grow your brand visibility across AI assistants (ChatGPT, Perplexity, Claude, Gemini, Grok, DeepSeek, YandexGPT and more). Monitor brand mentions in LLM responses, run visibility scans, analyze competitors, track publications, and get actionable GEO/AEO insights.",
+  "version": "1.0.0",
+  "homepage": "https://ai-semantica.com",
+  "documentationUrl": "https://ai-semantica.com/ru/mcp",
+  "transport": {
+    "type": "sse",
+    "url": "https://ai-semantica.com/mcp"
+  },
+  "authentication": {
+    "type": "bearer",
+    "description": "API key from your Semantica AI account. Sign up at https://ai-semantica.com"
+  },
+  "categories": [
+    "analytics",
+    "seo",
+    "marketing",
+    "ai-visibility",
+    "brand-monitoring"
+  ],
+  "tags": [
+    "seo",
+    "geo",
+    "aeo",
+    "ai-visibility",
+    "brand-monitoring",
+    "llm",
+    "analytics",
+    "marketing",
+    "chatgpt",
+    "perplexity",
+    "competitor-analysis",
+    "zero-click",
+    "agency"
+  ],
+  "tools": [
+    {
+      "name": "create_scan",
+      "description": "Create a new brand visibility scan across AI providers. Provide either domain or brandName (or both). Returns the scan ID — use get_scan to poll results."
+    },
+    {
+      "name": "list_scans",
+      "description": "List brand visibility scans with pagination."
+    },
+    {
+      "name": "get_scan",
+      "description": "Get the full results of a scan by its ID, including mention rates, per-provider breakdown, citations, raw AI responses, and noCompanyMention flag per result."
+    },
+    {
+      "name": "list_projects",
+      "description": "Get a list of Semantica AI projects. Pass clientId to list an agency client's projects instead of your own."
+    },
+    {
+      "name": "get_project",
+      "description": "Get details of a specific Semantica AI project by its ID."
+    },
+    {
+      "name": "list_all_projects",
+      "description": "Get ALL projects: your own projects plus all agency clients' projects combined in one call."
+    },
+    {
+      "name": "get_visibility_metrics",
+      "description": "Get brand visibility metrics for a project — mention rates by AI provider, over time. Supports date range filtering."
+    },
+    {
+      "name": "get_scan_results_bi",
+      "description": "Get detailed per-prompt scan results for BI analysis — each row contains a prompt, provider, mention flag, sentiment score, and no_company_mention flag. Use onlyNoCompany=true to filter for purely informational responses."
+    },
+    {
+      "name": "get_projects_summary",
+      "description": "Get a high-level summary for all your projects: total scans, prompts count, last scan date, domain."
+    },
+    {
+      "name": "get_zero_click_positions",
+      "description": "Zero-click positions report: estimated rank of your brand (and tracked competitors) in ordered lists inside AI answers. Heavy LLM call — may take 1–3 minutes."
+    },
+    {
+      "name": "get_mentioned_pages",
+      "description": "Get a list of pages/URLs from your domain (or a competitor's domain) cited in AI responses, sorted by citation frequency."
+    },
+    {
+      "name": "get_mentioned_pages_occurrences",
+      "description": "Get detailed occurrences of a specific URL or domain being mentioned in AI responses — with prompt context."
+    },
+    {
+      "name": "analyze_competitor_sentiment",
+      "description": "Analyze the sentiment of AI responses regarding specific competitors across given scans. Returns average sentiment scores per competitor."
+    },
+    {
+      "name": "list_publications",
+      "description": "List all tracked publications (articles, pages) for a project."
+    },
+    {
+      "name": "add_publication",
+      "description": "Add a publication URL to tracking for a project. The system will monitor AI responses for mentions of this URL."
+    },
+    {
+      "name": "delete_publication",
+      "description": "Remove a publication from tracking for a project."
+    },
+    {
+      "name": "list_publication_mentions",
+      "description": "Get AI-response mentions of tracked publications for a project."
+    },
+    {
+      "name": "list_agency_clients",
+      "description": "List agency clients. Agency API key: lists your clients. Semantica AI staff API key: pass agencyUserId to list a specific agency's clients."
+    },
+    {
+      "name": "resolve_agency_client_id_by_email",
+      "description": "Find a client's user ID by email address. Agency keys resolve among managed clients; Semantica AI staff keys resolve any registered user."
+    },
+    {
+      "name": "get_client_projects",
+      "description": "Get all projects belonging to a specific agency client."
+    },
+    {
+      "name": "get_client_scans",
+      "description": "Get scans for a specific agency client, with pagination."
+    },
+    {
+      "name": "onboarding_wizard_overview",
+      "description": "Get a brief step-by-step overview of the Semantica AI onboarding wizard — which tools to call at each step."
+    },
+    {
+      "name": "onboarding_request_email_code",
+      "description": "Step 1 of registration: send a 6-digit verification code to the user's email. Use without an API key (unauthenticated)."
+    },
+    {
+      "name": "onboarding_verify_email_code",
+      "description": "Verify the 6-digit code from email before setting a password."
+    },
+    {
+      "name": "onboarding_register",
+      "description": "Step 2 of registration: create a Semantica AI account. Returns accessToken — add it as Authorization: Bearer to MCP config."
+    },
+    {
+      "name": "onboarding_whoami",
+      "description": "Get the current authenticated user's profile."
+    },
+    {
+      "name": "onboarding_get_wizard_context",
+      "description": "Check onboarding state: whether an onboarding project exists, subscription info, and account profile."
+    },
+    {
+      "name": "onboarding_validate_site",
+      "description": "Validate a domain before creating a project (checks for blocked categories like gambling, spam, etc.)."
+    },
+    {
+      "name": "onboarding_set_account_type",
+      "description": "Set the account type: business or agency."
+    },
+    {
+      "name": "onboarding_save_geo_analytics",
+      "description": "Save the name of a GEO analytics service linked to the account (optional setup step)."
+    },
+    {
+      "name": "onboarding_detect_languages",
+      "description": "Detect the languages of a website by its domain."
+    },
+    {
+      "name": "onboarding_generate_topics",
+      "description": "Generate topic categories for visibility tracking, based on domain, country, and site language(s)."
+    },
+    {
+      "name": "onboarding_generate_prompts",
+      "description": "Generate search prompts grouped by topics — the queries used to measure brand visibility in AI responses."
+    },
+    {
+      "name": "onboarding_get_scan_setup_info",
+      "description": "Get scan limits and AI provider configuration before starting an onboarding scan."
+    },
+    {
+      "name": "onboarding_start_scan",
+      "description": "Create a project and start an onboarding visibility scan. Accepts queries or topics+promptsByTopic."
+    },
+    {
+      "name": "onboarding_get_scan",
+      "description": "Poll the status and results of an onboarding scan by its report ID."
+    },
+    {
+      "name": "onboarding_start_trial",
+      "description": "Activate a 3-day free trial (equivalent to clicking the 'Try for free' button in the UI)."
+    },
+    {
+      "name": "onboarding_subscription_checkout_url",
+      "description": "Get a Stripe checkout URL for subscribing to a paid plan (basic or advanced). Open the URL in a browser."
+    },
+    {
+      "name": "onboarding_get_billing_plans",
+      "description": "Get available billing plans with pricing."
+    },
+    {
+      "name": "onboarding_complete",
+      "description": "Mark the onboarding as completed."
+    }
+  ],
+  "license": "Proprietary",
+  "support": {
+    "email": "mail@ai-semantica.com",
+    "url": "https://ai-semantica.com"
+  }
+}
