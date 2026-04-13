@@ -5,7 +5,7 @@
 **Semantica AI** is an AI visibility analytics platform. This MCP server gives AI assistants (Claude, Cursor, Windsurf, etc.) direct access to Semantica's analytics — so you can monitor brand mentions in LLM responses, run visibility scans, analyze competitors, track publications, and get actionable GEO/AEO insights, all from your AI chat.
 
 🌐 **Website:** [ai-semantica.com](https://ai-semantica.com)  
-📖 **MCP Docs:** [ai-semantica.com/ru/mcp](https://ai-semantica.com/ru/mcp)
+📖 **MCP Docs:** [ai-semantica.com/ru/mcp](https://ai-semantica.com/en/mcp)
 
 ---
 
@@ -208,5 +208,5 @@ Sign up at [ai-semantica.com](https://ai-semantica.com) to get your API key.
 ## Links
 
 - 🌐 [Website](https://ai-semantica.com)
-- 📖 [MCP Documentation](https://ai-semantica.com/ru/mcp)
+- 📖 [MCP Documentation](https://ai-semantica.com/en/mcp)
 - 📬 Support: mail@ai-semantica.com

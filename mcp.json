@@ -4,7 +4,7 @@
   "description": "Track and grow your brand visibility across AI assistants (ChatGPT, Perplexity, Claude, Gemini, Grok, DeepSeek, YandexGPT and more). Monitor brand mentions in LLM responses, run visibility scans, analyze competitors, track publications, and get actionable GEO/AEO insights.",
   "version": "1.0.0",
   "homepage": "https://ai-semantica.com",
-  "documentationUrl": "https://ai-semantica.com/ru/mcp",
+  "documentationUrl": "https://ai-semantica.com/en/mcp",
   "transport": {
     "type": "sse",
     "url": "https://mcp.ai-semantica.com/mcp"
